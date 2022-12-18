@@ -1,0 +1,231 @@
+%-------------------------
+% Resume in Latex
+% Author : Sourabh Bajaj + some brand new features from Mary Feofanova
+% Website: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{makecell}
+\usepackage[link=off]{phonenumbers}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\usepackage[margin=0.3in]{geometry}
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.0in}
+\addtolength{\evensidemargin}{-0.0in}
+\addtolength{\textwidth}{0in}
+\addtolength{\topmargin}{20pt}
+\addtolength{\textheight}{0.0in}
+
+\urlstyle{same}
+
+\usepackage{xcolor}% http://ctan.org/pkg/xcolor
+\usepackage{hyperref}% http://ctan.org/pkg/hyperref
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!50!red,
+  linkbordercolor=red,
+  urlcolor=blue!70!black
+}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-10pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+\def \ifempty#1{\def\temp{#1} \ifx\temp\empty }
+
+\newcommand{\resumeItem}[2]{
+  \item\small{
+  	\ifempty{#1}#2\else\textbf{#1}{: #2 \vspace{-2pt}}\fi
+  }
+}
+
+\usepackage[dvipsnames]{xcolor}
+\usepackage{fancybox}
+
+\usepackage{lmodern}
+\usepackage{tikz}
+\definecolor{mygray}{gray}{0}
+% Style definition
+\tikzset{rndblock/.style={rounded corners,rectangle,draw,outer sep=0pt}}
+
+% Command Definition
+% 1 optional to customize the aspect, 2 mandatory: text to be framed
+\newcommand{\tframed}[2][]{\tikz[baseline=(h.base)]\node[rndblock,#1] (h) {\color{black}{#2}};}
+
+\newcommand*{\mystrut}{\rule[-0.2\baselineskip]{0pt}{0.8\baselineskip}}
+\newcommand{\skill}[1]{\tframed[lightgray]{\mystrut#1}}
+
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textcolor{mygray}{#2} \\
+      \textit{\small#3} & \textcolor{mygray}{\textit{\small #4}} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeExpSubheading}[5]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1}  & \textcolor{mygray}{#2} \\
+      \textit{\small#3} & \textcolor{mygray}{\textit{\small #4}} \\
+      {\scriptsize#5}
+    \end{tabular*}\vspace{4pt}
+}
+
+\newcommand{\resumeProjSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1}  & \textcolor{mygray}{#2} \\
+      \scriptsize {#3} & \textcolor{mygray}{\textit{\small #4}} \\
+    \end{tabular*}\vspace{4pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.2in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\usepackage{changepage}
+\newcommand{\resumeDesc}[1]{\begin{adjustwidth}{5pt}{0pt}\vspace{-2pt}{\small{#1}}\end{adjustwidth}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{{\Large Kosolapov Ivan}} & Email : \href{mailto:vanya.kosolapov.02@mail.ru}{vanya.kosolapov.02@mail.ru}\\
+  GitHub: \href{https://github.com/Zymik}{Zymik} & Mobile : +7-911-322-94-60 \\ Telegram: \href{https://t.me/xvanonex}{@xvanonex}
+\end{tabular*}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {ITMO University}{Saint-Petersburg, Russia}
+      {Bachelor of Applied Mathematics and Informatics}{Sep. 2020 -- Present}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------------
+\section{Work Experience}
+  \resumeSubHeadingListStart
+      \resumeExpSubheading
+      {Yandex}{Moscow, Russia}
+      {Java Developer Intern, Kinopoisk Showcase Team}{July 2022 - Nov. 2022 }
+      {\skill{Java} \skill{Spring Boot} \skill{Spring MVC} \skill{Flyway} \skill{SQL} \skill{Docker} \skill{Junit} \skill{Mockito} \skill{GraphQL}}
+      \resumeDesc{
+      \begin{itemize}
+          \item Implemented support of new device features configuration format.
+          \item Added flyway migrations to one service
+          \item Created client for mocking service answer by value in JSON storage
+          \item Stress tested few services, added preheat to them, modified thread pool 
+          \item Did many refactoring and code quality improvments: change code for increasing integration tests coverage; add support of new version of domain objects, delete all legacy code that used old domain objects
+          \item Researched anomaly request count to endpoint. Created convenient monitoring graphics
+          \item Did many small tasks like adding new field to GraphQl data, integration tests rewrite etc. Fixed many small bugs
+      
+      \end{itemize}}
+
+  \resumeSubHeadingListEnd
+
+\section{Recent Projects}
+  \resumeSubHeadingListStart
+  
+      \resumeProjSubheading
+      {\href{https://github.com/Zymik/post-cat}{Post cat - posting application} }{}
+      {\skill{Scala} \skill{Functional Programming} \skill{Cats Effect} \skill{Cats} \skill{Http4s} \skill{Doobie} \skill{Tapir} \skill{ScalaTest} \skill{ScalaMock}}{}
+          \resumeDesc{The main idea of project to create an application for making post on different platform with telegram bot as user interface. Now implemented: core service for managing posts and groups; telegram bot for post to public channels; public api for getting post of groups. Also implemented commands dsl based on cats-parse, that use to easily parse telegram messages to bot commands}
+  
+    \resumeProjSubheading
+      {\href{https://github.com/Zymik/ll1-rust-parser-generator}{LL1 parser generator}}{}
+      {\skill{Rust} \skill{Parsers} \skill{Code generation} \skill{GraphViz} \skill{Nom}}{}
+          \resumeDesc{Wrote LL1 parser generator that implement part of popular \href{https://www.antlr.org/}{ANTLR} generator, but generate code in Rust that ANTLR doesn't support. Generator support synthesized and inherited attributes. You can set tokens for lexical analysis and characters to skip as regex. Used \href{https://github.com/Geal/nom}{nom} as library of parser combinators to parse grammar description. Syntax tree can be easily visualized with \href{https://graphviz.org/}{GraphViz}}
+          
+    \begin{comment}  
+    \resumeProjSubheading
+      {\href{https://github.com/AndroidTopTeam/MyChief}{MyChief}}{Moscow, Russia}
+      {\skill{Java} \skill{Android}}{Nov. 2017}
+      \resumeDesc{Learned Android and implemented all structure and internal code logic (activities, fragments, lru cache) of mobile app that can search for recipes with ingredients entered by user, collaborated with a team of 3 students.}
+    \end{comment}
+      
+  \resumeSubHeadingListEnd
+
+\section{Achievements}
+  \resumeSubHeadingListStart
+    \resumeProjSubheading
+      {\href{https://www.esi2019.ae/en/pages/home.aspx}{ESI 19: international expo for young researchers} - Participant}{Abu-Dhabi, UAE}
+      {\skill{Python} \skill{Arduino} \skill{Math modeling}}
+      {Sep. 2019}
+          \resumeDesc{Created prototype of controller based on Arduino for specific(\href{https://en.wikipedia.org/wiki/Azipod}{azipod}) kinds of ship. Created small simulator game that use that controller to control ship.}
+  \resumeSubHeadingListEnd
+\section{Related University Courses}
+    \resumeSubHeadingListStart
+    \resumeProjSubheading
+      {\href{https://github.com/Zymik/Java-Advanced-ITMO-2022}{Java Advanced}}{}
+      {\skill{Java} \skill{Concurrency} \skill{Reflection} \skill{NIO} \skill{IO} \skill{Collections} \skill{Streams} \skill{Network} \skill{Javadoc}}
+      {}
+          \resumeDesc{Course focused on advanced features of Java and deep in common ones. Through this course I wrote many things like default interface implementation generator; web crawler, that download web pages parallel; simple non-blocking udp server and client, that use Java NIO channels and etc. You can look on my solutions in link in header}
+    \resumeProjSubheading
+      {\href{https://github.com/Zymik/itmo-web-programming-2021}{Web Programming}}{}
+      {\skill{Java} \skill{Spring Boot} \skill{Spring MVC} \skill{Spring Data} \skill{Java Script} \skill{Vue.js} \skill{SQL}}{}
+      \resumeDesc{This course is introduction to web development, that show web technologies in progression: from Java servlets and html templates to Spring Boot and single page applications with Vue.js. You can my solutions in link in header}
+    \resumeProjSubheading
+      {\href{https://github.com/Zymik/fp-itmo-2022}{Functional Programming}}{}
+      {\skill{Functional Programming} \skill{Haskell}} {}
+      \resumeDesc{
+      Course tells about functional programming conceptions and principals. Course starts from simple algebraic data types and end with more advanced constructions like Free Monad and Lens. You can look on my solutions in link in header
+      }
+    \resumeSubHeadingListEnd
+%
+%--------PROGRAMMING SKILLS------------
+\section{Programming Skills}
+ \resumeSubHeadingListStart
+   \item{
+     \textbf{Languages}{: Java, Scala, Rust, Haskell, Python. }
+   }\vspace{-7pt}
+   \item{
+     \textbf{Frameworks \& Tools}{: Spring Boot, Spring MVC, Cats Effect, SQL, Bash, Flyway, Git, Docker. }
+   }
+   \vspace{-7pt}
+   \item{
+     \textbf{Knowledge}{: Type Theory, Functional Programming, Algorithms, Data Structures, Parallel Programming.}
+   }
+ \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
