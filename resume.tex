@@ -143,7 +143,18 @@
 
 %-----------EXPERIENCE-----------------
 \section{Work Experience}
-  \resumeSubHeadingListStart
+
+    \resumeSubHeadingListStart
+      \resumeExpSubheading
+      {VK}{Saint-Petersburg, Russia}
+      {Java Developer, OK Customers Support Team}{Feb. 2023 - Apr. 20223 }
+      {\skill{Java} \skill{Spring} \skill{Spring MVC} \skill{Cassandra} \skill{Kotlin} \skill{ElasticSearch}}
+      \resumeDesc{
+      \begin{itemize}
+          \item Implemented new states for support bot
+          \item Refactored part of legacy code
+          \item Fixed many bugs
+      \end{itemize}}
       \resumeExpSubheading
       {Yandex}{Moscow, Russia}
       {Java Developer Intern, Kinopoisk Showcase Team}{July 2022 - Nov. 2022 }
@@ -155,9 +166,8 @@
           \item Created client for mocking service answer by value in JSON storage
           \item Stress tested few services, added preheat to them, modified thread pool 
           \item Did many refactoring and code quality improvements: changed code for increasing integration tests coverage; added support of new version of domain objects, deleted all legacy code that used old domain objects
-          \item Researched anomaly request count to endpoint. Created convenient monitoring graphics
-          \item Did others minor tasks like adding new field to GraphQl data, integration tests rewrite etc. 
-          \item Fixed many small bugs
+          \item Created convenient monitoring graphics
+          \item Fixed many bugs
       
       \end{itemize}}
 
@@ -165,16 +175,20 @@
 
 \section{Recent Projects}
   \resumeSubHeadingListStart
-  
+
+    \resumeProjSubheading
+      {\href{https://github.com/Zymik/course-api}{Course API} }{}
+      {\skill{Kotlin} \skill{Ktor} \skill{Koin} \skill{Postgresql} \skill{Redis}} {}
+          \resumeDesc{API for managing course. You can create new courses, add lessons and task to them. You can join to course as student. Teacher can grade task for each student. I wrote this project to take a look on Kotlin and Ktor framework }
+          
       \resumeProjSubheading
       {\href{https://github.com/Zymik/post-cat}{Post cat - posting application} }{}
       {\skill{Scala} \skill{Functional Programming} \skill{Cats Effect} \skill{Cats} \skill{Http4s} \skill{Doobie} \skill{Tapir} \skill{ScalaTest} \skill{ScalaMock}}{}
-          \resumeDesc{The main idea of the project is to create an application for making posts on different platforms with telegram bot as user interface. Now implemented: core service for managing posts and groups; telegram bot to make posts to public channels; Public API for getting posts of groups. Also implemented commands DSL based on cats-parse to easily parse telegram messages to bot commands}
+          \resumeDesc{The main idea of the project is to create an application for making posts on different platforms with telegram bot as user interface. Now
+implemented: core service for managing posts and groups; telegram bot to make posts to public channels; Public API for getting posts
+of groups. Also implemented commands DSL based on cats-parse to easily parse telegram messages to bot commands
+}
   
-    \resumeProjSubheading
-      {\href{https://github.com/Zymik/ll1-rust-parser-generator}{LL1 parser generator}}{}
-      {\skill{Rust} \skill{Parsers} \skill{Code generation} \skill{GraphViz} \skill{Nom}}{}
-          \resumeDesc{LL1 parser generator that implement part of popular \href{https://www.antlr.org/}{ANTLR} generator, but generate code in Rust that ANTLR doesn't support. Generator supports synthesized and inherited attributes. You can set tokens as regex for lexical analysis and characters to skip. Used \href{https://github.com/Geal/nom}{nom} as library of parser combinators to parse grammar description. Syntax tree can be easily visualized with \href{https://graphviz.org/}{GraphViz}}
           
     \begin{comment}  
     \resumeProjSubheading
@@ -185,14 +199,6 @@
       
   \resumeSubHeadingListEnd
 
-\section{Achievements}
-  \resumeSubHeadingListStart
-    \resumeProjSubheading
-      {\href{https://www.esi2019.ae/en/pages/home.aspx}{ESI 19: international expo for young researchers} - Participant}{Abu-Dhabi, UAE}
-      {\skill{Python} \skill{Arduino} \skill{Math modeling}}
-      {Sep. 2019}
-          \resumeDesc{Created prototype of controller based on Arduino for specific (\href{https://en.wikipedia.org/wiki/Azipod}{azipod}) kinds of ship. Created small simulator game that use that controller to control ship.}
-  \resumeSubHeadingListEnd
 \section{Relevant University Courses}
     \resumeSubHeadingListStart
     \resumeProjSubheading
@@ -216,10 +222,10 @@
 \section{Programming Skills}
  \resumeSubHeadingListStart
    \item{
-     \textbf{Languages}{: Java, Scala, Rust, Haskell, Python }
+     \textbf{Languages}{: Java, Scala, Kotlin, Rust, Haskell, Python }
    }\vspace{-7pt}
    \item{
-     \textbf{Frameworks \& Tools}{: Spring Boot, Spring MVC, Cats Effect, SQL, Bash, Flyway, Git, Docker }
+     \textbf{Frameworks \& Tools}{: Spring Boot, Spring MVC, Ktor, Cats Effect, SQL, Bash, Flyway, Git, Docker }
    }
    \vspace{-7pt}
    \item{
